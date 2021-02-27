@@ -8,5 +8,4 @@ def home(request):
 def tienda(request):
     return render(request, "tienda.html",  {"valor":request.path})
 
-def contacto(request):
-    return render(request, "contactos.html",{"valor":request.path})
+
