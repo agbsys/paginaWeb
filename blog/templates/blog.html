@@ -21,7 +21,7 @@
     <div style="width: 75%; margin: auto; text-align: center; color: white;">Categorias:
         {% for blog in listaBlogs %}
         {% for categoria in blog.categorias.all%}
-        {{categoria.nombre}} &nbsp;
+        <a class="enlaceBlog" href="categoria\{{categoria.id}}" >{{categoria.nombre}}</a> &nbsp;
         {% endfor %}
         {% endfor %}
     </div>

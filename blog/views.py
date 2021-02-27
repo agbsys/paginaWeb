@@ -6,7 +6,10 @@ def blog(request):
     listaBlogs = post.objects.all()   
     return render(request, "blog.html",  {"listaBlogs":listaBlogs, "valor":1})
     
-def categoria(request, categoria_id):
-    lcategorias = categoria.objects.get(id=categoria_id)
-    listaBlogs = post.objects.filter(categorias=lcategorias)   
-    return render(request, "categorias.html", {"categorias":lcategorias, "listaBlogs":listaBlogs})
+def filtracategoria(request, categoria_id):
+    lcategoria = categoria.objects.get(id=categoria_id)
+    print(lcategoria.nombre)
+    listaBlogs = post.objects.filter(categorias=lcategoria)
+    #listaBlogs = post.objects.all()   
+    print(listaBlogs)
+    return render(request, "categorias.html", {"categorias":lcategoria, "listaBlogs":listaBlogs})
