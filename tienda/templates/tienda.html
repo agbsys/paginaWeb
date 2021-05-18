@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %} 
+{% block content %}
+<div class="conainer">
+  <div style="float: right;">
+    <p style="color: white;">texto ode prueba</p>
+  </div>
+<div class="row">
+{% for producto in listaProductos %}
+  <div class="col-md-3">
+    <div class="card" style="width: 100%; margin-top: 5px;">
+      <img  src="{{ producto.imagen.url }}" alt=""  class="card-img-top">
+      <div class="card-body" style="text-align: center;">
+      <h7 class="card-title">{{producto.descripcion}}</h7>
+      <h7 class="card-body">{{producto.precio}}</h7>
+      </div>
+      <div class="card-footer text-center">
+        <a href="#" class="btn btn-success">Agregar Producto</a>
+      </div>
+    </div>
+  </div>
+       
+{% endfor %}
+</div>
+</div>
+<section>
+    <div style="width: 75%; margin: auto; text-align: center; color: white;">Categorias:
+        {% for blog in listaBlogs %}
+        {% for categoria in producto.categorias.all%}
+        <a class="enlaceBlog" href="categoria\{{categoria.id}}" >{{categoria.nombre}}</a> &nbsp;
+        {% endfor %}
+        {% endfor %}
+    </div>
+</section>  
+{% endblock content %}

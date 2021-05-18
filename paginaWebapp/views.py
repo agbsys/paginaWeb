@@ -5,7 +5,6 @@ from django.shortcuts import render, HttpResponse
 def home(request):
     return render(request, "home.html", {"valor":request.path})
 
-def tienda(request):
-    return render(request, "tienda.html",  {"valor":request.path})
+
 
 
