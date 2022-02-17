@@ -34,4 +34,4 @@ class Productos(models.Model):
         verbose_name_plural = 'productos'
     
     def __str__(self):
-        return self.descipcion
+        return self.descripcion

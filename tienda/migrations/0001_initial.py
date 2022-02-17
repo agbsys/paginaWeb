@@ -29,7 +29,7 @@ class Migration(migrations.Migration):
             name='Productos',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('descipcion', models.CharField(max_length=50)),
+                ('descripcion', models.CharField(max_length=50)),
                 ('imagen', models.ImageField(blank=True, null=True, upload_to='productos')),
                 ('precio', models.FloatField()),
                 ('existencia', models.IntegerField()),

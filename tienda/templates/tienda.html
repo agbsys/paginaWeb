@@ -2,8 +2,8 @@
 {% load static %} 
 {% block content %}
 <div class="conainer">
-  <div style="float: right;">
-    <p style="color: white;">texto ode prueba</p>
+  <div style="float: left;">    
+    {% include "carro/widget.html" %}
   </div>
 <div class="row">
 {% for producto in listaProductos %}
@@ -15,7 +15,7 @@
       <h7 class="card-body">{{producto.precio}}</h7>
       </div>
       <div class="card-footer text-center">
-        <a href="#" class="btn btn-success">Agregar Producto</a>
+        <a href="{% url 'carro:agregar' producto.id %}" class="btn btn-success">Agregar Producto</a>
       </div>
     </div>
   </div>
